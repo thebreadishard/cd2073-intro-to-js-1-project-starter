@@ -32,7 +32,7 @@ products[2] = {
   price: 10,
   quantity: 0,
   productId: 103,
-  image: "/images/strawberry.jpg"
+  image: "/images/orange.jpg"
 };
 
 /* Images provided in /images folder. All images from Unsplash.com
