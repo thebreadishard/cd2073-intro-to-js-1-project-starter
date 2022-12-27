@@ -1,5 +1,7 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
 
+const products = [];
+
 /* Create 3 or more product objects using object literal notation 
    Each product should include five properties
    - name: name of product (string)
@@ -9,6 +11,30 @@
    - image: picture of product (url string)
 */
 
+products[0] = {
+  name: "Carton of Cherries",
+  price: 4,
+  quantity: 0,
+  productId: 101,
+  image: /images/cherry.jpg
+};
+
+products[1] = {
+  name: "Carton of Strawberries",
+  price: 5,
+  quantity: 0,
+  productId: 102,
+  image: /images/strawberry.jpg
+};
+
+products[2] = {
+  name: "Bag of Oranges",
+  price: 10,
+  quantity: 0,
+  productId: 103,
+  image: /images/strawberry.jpg
+};
+
 /* Images provided in /images folder. All images from Unsplash.com
    - cherry.jpg by Mae Mu
    - orange.jpg by Mae Mu
@@ -16,6 +42,8 @@
 */
 
 /* Declare an empty array named cart to hold the items in the cart */
+
+const cart = [];
 
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
