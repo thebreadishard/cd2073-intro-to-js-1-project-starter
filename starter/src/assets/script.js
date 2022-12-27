@@ -16,7 +16,7 @@ products[0] = {
   price: 4,
   quantity: 0,
   productId: 101,
-  image: /images/cherry.jpg
+  image: "/images/cherry.jpg"
 };
 
 products[1] = {
@@ -24,7 +24,7 @@ products[1] = {
   price: 5,
   quantity: 0,
   productId: 102,
-  image: /images/strawberry.jpg
+  image: "/images/strawberry.jpg"
 };
 
 products[2] = {
@@ -32,7 +32,7 @@ products[2] = {
   price: 10,
   quantity: 0,
   productId: 103,
-  image: /images/strawberry.jpg
+  image: "/images/strawberry.jpg"
 };
 
 /* Images provided in /images folder. All images from Unsplash.com
