@@ -105,7 +105,7 @@ function removeProductFromCart(productId) {
 function cartTotal() {
   let total = 0;
   for (let p = 0; p < cart.length; p = p + 1) {
-    total += cart.quantity[p] * cart[p].price;
+    total += cart[p].quantity * cart[p].price;
   };
   return total.toFixed(2);
 }
