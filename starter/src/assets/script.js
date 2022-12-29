@@ -126,7 +126,7 @@ function emptyCart() {
 
 function pay(cashReceived) {
   totalPaid += cashReceived;
-  return cartTotal() - totalPaid;
+  return totalPaid - cartTotal();
 }
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
