@@ -101,12 +101,24 @@ function removeProductFromCart(productId) {
   - cartTotal should return the sum of the products in the cart
 */
 
+function cartTotal() {
+  //
+}
+
 /* Create a function called emptyCart that empties the products from the cart */
+
+function emptyCart() {
+  //
+}
 
 /* Create a function named pay that takes in an amount as an argument
   - pay will return a negative number if there is a remaining balance
   - pay will return a positive number if money should be returned to customer
 */
+
+function pay() {
+  //
+}
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 
