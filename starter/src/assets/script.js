@@ -121,8 +121,9 @@ function emptyCart() {
   - pay will return a positive number if money should be returned to customer
 */
 
-function pay() {
-  //
+function pay(cashReceived) {
+  totalPaid += cashReceived;
+  return cartTotal() - totalPaid;
 }
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
