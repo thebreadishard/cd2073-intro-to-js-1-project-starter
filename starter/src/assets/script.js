@@ -1,6 +1,7 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
 
 const products = [];
+let totalPaid = 0;
 
 /* Create 3 or more product objects using object literal notation 
    Each product should include five properties
@@ -102,13 +103,17 @@ function removeProductFromCart(productId) {
 */
 
 function cartTotal() {
-  //
+  let total = 0;
+  for (let p = 0; p < cart.length; p = p + 1) {
+    total += cart.quantity[p] * cart[p].price;
+  };
+  return total.toFixed(2);
 }
 
 /* Create a function called emptyCart that empties the products from the cart */
 
 function emptyCart() {
-  //
+  cart = [];
 }
 
 /* Create a function named pay that takes in an amount as an argument
