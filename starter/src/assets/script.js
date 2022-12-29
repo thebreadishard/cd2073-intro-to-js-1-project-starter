@@ -126,7 +126,11 @@ function emptyCart() {
 
 function pay(cashReceived) {
   totalPaid += cashReceived;
-  return totalPaid - cartTotal();
+  let cashReturned = totalPaid - cartTotal();
+  if (cashReturned >= 0) {
+    totalPaid = 0;
+  }
+  return cashReturned;
 }
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
