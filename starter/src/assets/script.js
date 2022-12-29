@@ -110,7 +110,7 @@ function cartTotal() {
   for (let p = 0; p < cart.length; p = p + 1) {
     total += cart[p].quantity * cart[p].price;
   };
-  return total.toFixed(2);
+  return Number.parseFloat(total.toFixed(2));
 }
 
 /* Create a function called emptyCart that empties the products from the cart */
