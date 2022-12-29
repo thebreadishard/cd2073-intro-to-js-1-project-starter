@@ -83,6 +83,9 @@ function increaseQuantity(productId) {
 function decreaseQuantity(productId) {
   let product = getProductByIdFromList(productId, products);
   product.quantity = product.quantity - 1;
+  if (product.quantity == 0) {
+    removeProductFromCart(productId)
+  };
 }
 
 /* Create a function named removeProductFromCart that takes in the productId as an argument
