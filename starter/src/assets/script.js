@@ -92,10 +92,8 @@ function decreaseQuantity(productId) {
 
 function removeProductFromCart(productId) {
   let product = getProductByIdFromList(productId, products);
-  product.quantity = product.quantity + 1;
-  if (cart.includes(product)) {
-    cart.pop(product);
-  };
+  product.quantity = 0;
+  cart.pop(product);
 }
 
 /* Create a function named cartTotal that has no parameters
