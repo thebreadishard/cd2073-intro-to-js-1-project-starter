@@ -45,6 +45,10 @@ products[2] = {
 
 const cart = [];
 
+function getProductByIdFromList(productId, productList) {
+  return productList.find((product) => product.productId === productId);
+}
+
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
   - addProductToCart should then increase the product's quantity
@@ -52,7 +56,7 @@ const cart = [];
 */
 
 function addProductToCart(productId) {
-  let product = products.find((product) => product.productId === productId);
+  let product = getProductByIdFromList(productId, products);
   product.quantity = product.quantity + 1;
   if (!cart.includes(product)) {
     cart.push(product);
@@ -65,7 +69,7 @@ function addProductToCart(productId) {
 */
 
 function increaseQuantity(productId) {
-  let product = products.find((product) => product.productId === productId);
+  let product = getProductByIdFromList(productId, products);
   product.quantity = product.quantity + 1;
 }
 
@@ -76,7 +80,7 @@ function increaseQuantity(productId) {
 */
 
 function decreaseQuantity(productId) {
-  let product = products.find((product) => product.productId === productId);
+  let product = getProductByIdFromList(productId, products);
   product.quantity = product.quantity - 1;
 }
 
@@ -87,7 +91,7 @@ function decreaseQuantity(productId) {
 */
 
 function removeProductFromCart(productId) {
-  let product = products.find((product) => product.productId === productId);
+  let product = getProductByIdFromList(productId, products);
   product.quantity = product.quantity + 1;
   if (cart.includes(product)) {
     cart.pop(product);
