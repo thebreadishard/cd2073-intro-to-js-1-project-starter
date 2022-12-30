@@ -61,7 +61,7 @@ function addProductToCart(productId) {
   product.quantity = product.quantity + 1;
   if (!cart.includes(product)) {
     cart.push(product);
-  };
+  }
 }
 
 /* Creating a function named increaseQuantity that takes in the productId as an argument
@@ -70,7 +70,7 @@ function addProductToCart(productId) {
 */
 
 function increaseQuantity(productId) {
-  let product = getProductByIdFromList(productId, products);
+  let product = getProductByIdFromList(productId, cart);
   product.quantity = product.quantity + 1;
 }
 
@@ -81,11 +81,11 @@ function increaseQuantity(productId) {
 */
 
 function decreaseQuantity(productId) {
-  let product = getProductByIdFromList(productId, products);
+  let product = getProductByIdFromList(productId, cart);
   product.quantity = product.quantity - 1;
-  if (product.quantity == 0) {
-    removeProductFromCart(productId)
-  };
+  if (product.quantity === 0) {
+    removeProductFromCart(productId);
+  }
 }
 
 /* Creating a function named removeProductFromCart that takes in the productId as an argument
@@ -95,7 +95,7 @@ function decreaseQuantity(productId) {
 */
 
 function removeProductFromCart(productId) {
-  let product = getProductByIdFromList(productId, products);
+  let product = getProductByIdFromList(productId, cart);
   product.quantity = 0;
   cart.pop(product);
 }
@@ -109,14 +109,14 @@ function cartTotal() {
   let total = 0;
   for (let p = 0; p < cart.length; p = p + 1) {
     total += cart[p].quantity * cart[p].price;
-  };
+  }
   return Number.parseFloat(total.toFixed(2));
 }
 
 /* Creating a function called emptyCart that empties the products from the cart */
 
 function emptyCart() {
-  cart = [];
+  cart.splice(0, cart.length);
 }
 
 /* Creating a function named pay that takes in an amount as an argument
